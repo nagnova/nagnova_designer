@@ -55,3 +55,21 @@ a {
   color: #ffffff;
   background: #e50914;
 }
+
+/* Mise en page responsive */
+html,
+body,
+#root {
+  width: 100%;
+  max-width: 100%;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+main {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+}

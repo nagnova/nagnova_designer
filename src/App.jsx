@@ -131,6 +131,7 @@ function Reveal({ children, className = "", delay = 0, ...props }) {
 }
 
 function App() {
+  const formRef = useRef(null);
   const [showAllProjects, setShowAllProjects] = useState(false);
   const [formStatus, setFormStatus] = useState({ type: "", message: "" });
   const [sending, setSending] = useState(false);
@@ -151,8 +152,8 @@ function App() {
     const form = new FormData(formElement);
 
     const mailBody = [
-      `Nom : ${form.get("name")}`,
-      `E-mail : ${form.get("email")}`,
+      `Nom : ${form.get("from_name")}`,
+      `E-mail : ${form.get("reply_to")}`,
       `Sujet : ${form.get("subject")}`,
       "",
       String(form.get("message") ?? ""),
@@ -269,6 +270,7 @@ function App() {
         <Reveal
           className="hero-visual"
           delay={120}
+          role="img"
           aria-label="Composition graphique abstraite"
         >
           <div className="visual-grid" />
@@ -408,11 +410,15 @@ function App() {
           </div>
         </Reveal>
         <Reveal className="contact-form-wrap" delay={100}>
-          <form className="contact-form" onSubmit={handleContactSubmit}>
+          <form
+            ref={formRef}
+            className="contact-form"
+            onSubmit={handleContactSubmit}
+          >
             <label htmlFor="contact-name">Votre nom</label>
             <input
               id="contact-name"
-              name="name"
+              name="from_name"
               type="text"
               autoComplete="name"
               placeholder="Nom et prénom"
@@ -421,7 +427,7 @@ function App() {
             <label htmlFor="contact-email">Votre adresse e-mail</label>
             <input
               id="contact-email"
-              name="email"
+              name="reply_to"
               type="email"
               autoComplete="email"
               placeholder="vous@exemple.com"

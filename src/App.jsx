@@ -35,18 +35,6 @@ const services = [
 
 const projects = [
   {
-    image: "article-journal.jpg",
-    alt: "Création graphique pour un article de journal",
-    title: "Article de journal",
-    description: "Création éditoriale et mise en page.",
-  },
-  {
-    image: "brochure-esaf-recto.png",
-    alt: "Brochure ESAF, face recto",
-    title: "Brochure ESAF — Recto",
-    description: "Conception graphique de brochure.",
-  },
-  {
     image: "new-years.jpg",
     alt: "Création graphique pour le Nouvel An",
     title: "New Year's",
@@ -69,12 +57,6 @@ const projects = [
     alt: "Création graphique autour des tacos",
     title: "Tacos",
     description: "Visuel promotionnel pour la restauration.",
-  },
-  {
-    image: "brochure-esaf-verso.png",
-    alt: "Brochure ESAF, face verso",
-    title: "Brochure ESAF — Verso",
-    description: "Mise en page et continuité visuelle.",
   },
   {
     image: "poster-movies.jpg",
@@ -133,6 +115,7 @@ function Reveal({ children, className = "", delay = 0, ...props }) {
 function App() {
   const formRef = useRef(null);
   const [showAllProjects, setShowAllProjects] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
   const [formStatus, setFormStatus] = useState({ type: "", message: "" });
   const [sending, setSending] = useState(false);
 
@@ -184,10 +167,15 @@ function App() {
     setSending(true);
 
     try {
-      await emailjs.sendForm(
+      await emailjs.send(
         import.meta.env.VITE_EMAILJS_SERVICE_ID,
         import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
-        formRef.current,
+        {
+          from_name: form.get("from_name"),
+          reply_to: form.get("reply_to"),
+          subject: form.get("subject"),
+          message: form.get("message"),
+        },
         import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
       );
 
@@ -228,7 +216,26 @@ function App() {
             alt="NAGNOVA DESIGNER — logo officiel"
           />
         </a>
-        <nav className="navigation" aria-label="Navigation principale">
+        <button
+          className="menu-toggle"
+          type="button"
+          aria-label={menuOpen ? "Fermer le menu" : "Ouvrir le menu"}
+          aria-expanded={menuOpen}
+          aria-controls="main-navigation"
+          onClick={() => setMenuOpen((open) => !open)}
+        >
+          <span />
+          <span />
+          <span />
+        </button>
+        <nav
+          id="main-navigation"
+          className={`navigation${menuOpen ? " is-open" : ""}`}
+          aria-label="Navigation principale"
+          onClick={(event) => {
+            if (event.target.closest("a")) setMenuOpen(false);
+          }}
+        >
           <a href="#accueil">Accueil</a>
           <a href="#services">Services</a>
           <a href="#realisations">Réalisations</a>
@@ -324,8 +331,8 @@ function App() {
         <Reveal>
           <div className="section-heading">
             <div>
-              <p className="eyebrow">MON UNIVERS CRÉATIF</p>
-              <h2>Mes réalisations</h2>
+              <p className="eyebrow">NOTRE UNIVERS CRÉATIF</p>
+              <h2>Nos réalisations</h2>
             </div>
             <p className="section-intro">
               Découvrez une sélection de créations graphiques imaginées pour

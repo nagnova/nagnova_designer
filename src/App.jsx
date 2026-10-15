@@ -78,6 +78,50 @@ const projects = [
   },
 ];
 
+const skills = [
+  {
+    number: "01",
+    title: "Création graphique",
+    description:
+      "Identité visuelle, mise en page et déclinaisons adaptées à chaque support.",
+    tools: "Illustrator · InDesign · Canva",
+  },
+  {
+    number: "02",
+    title: "Photographie & retouche",
+    description:
+      "Photographie événementielle, retouche colorimétrique et traitement d’images.",
+    tools: "Photoshop · Lightroom",
+  },
+  {
+    number: "03",
+    title: "Communication digitale",
+    description:
+      "Création de contenus numériques et animation des réseaux sociaux au service des marques.",
+    tools: "Contenu · Réseaux sociaux · Marque",
+  },
+  {
+    number: "04",
+    title: "Montage vidéo",
+    description:
+      "Montage vidéo et création de contenus animés pour raconter une idée en mouvement.",
+    tools: "Notions : Premiere Pro · After Effects",
+  },
+];
+
+const technologies = [
+  { name: "Illustrator", mark: "Ai", style: "illustrator" },
+  { name: "InDesign", mark: "Id", style: "indesign" },
+  { name: "Canva", mark: "C", style: "canva" },
+  { name: "Photoshop", mark: "Ps", style: "photoshop" },
+  { name: "Lightroom", mark: "Lr", style: "lightroom" },
+  { name: "Premiere Pro", mark: "Pr", style: "premiere" },
+  { name: "After Effects", mark: "Ae", style: "after-effects" },
+  // { name: "Notion", mark: "N", style: "notion" },
+  { name: "Microsoft Office", mark: "▦", style: "office" },
+  { name: "Sage 100", mark: "sage", style: "sage" },
+];
+
 function Reveal({ children, className = "", delay = 0, ...props }) {
   const [visible, setVisible] = useState(false);
   const elementRef = useRef(null);
@@ -238,6 +282,7 @@ function App() {
         >
           <a href="#accueil">Accueil</a>
           <a href="#services">Services</a>
+          <a href="#competences">Compétences</a>
           <a href="#realisations">Réalisations</a>
           <a href="#apropos">À propos</a>
           <a href="#contact" className="nav-contact">
@@ -324,6 +369,63 @@ function App() {
               </article>
             </Reveal>
           ))}
+        </div>
+      </section>
+
+      <section className="skills-section" id="competences">
+        <div className="section-wrap">
+          <Reveal>
+            <div className="section-heading">
+              <div>
+                <p className="eyebrow">SAVOIR-FAIRE</p>
+                <h2>Des idées, de la création et du savoir-faire.</h2>
+              </div>
+              <p className="section-intro">
+                Graphiste et photographe indépendant depuis 2022, nous donnons
+                forme aux idées avec une approche créative et soignée.
+              </p>
+            </div>
+          </Reveal>
+          <div className="skills-grid">
+            {skills.map((skill, index) => (
+              <Reveal key={skill.number} delay={index * 70}>
+                <article className="skill-card">
+                  <span className="skill-number">{skill.number}</span>
+                  <h3>{skill.title}</h3>
+                  <p>{skill.description}</p>
+                  <span className="skill-tools">{skill.tools}</span>
+                </article>
+              </Reveal>
+            ))}
+          </div>
+          <div className="technology-carousel">
+            <p className="technology-caption">LES OUTILS QUE NOUS UTILISONS</p>
+            <div className="technology-marquee">
+              <div className="technology-track">
+                {[0, 1].map((copy) => (
+                  <div
+                    className="technology-group"
+                    key={copy}
+                    aria-hidden={copy === 1 ? "true" : undefined}
+                  >
+                    {technologies.map((technology) => (
+                      <div className="technology-item" key={technology.name}>
+                        <span
+                          className={`technology-mark ${technology.style}`}
+                          aria-hidden="true"
+                        >
+                          {technology.mark}
+                        </span>
+                        <span className="technology-name">
+                          {technology.name}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 

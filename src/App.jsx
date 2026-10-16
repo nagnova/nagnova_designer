@@ -122,6 +122,254 @@ const technologies = [
   { name: "Sage 100", mark: "sage", style: "sage" },
 ];
 
+const translations = {
+  fr: {
+    nav: ["Accueil", "Services", "Compétences", "Réalisations", "À propos"],
+    contact: "Parlons de votre projet",
+    heroEyebrow: "STUDIO CRÉATIF · DESIGN · STRATÉGIE",
+    heroTitle: "Donnons à votre marque",
+    heroAccent: "une identité forte.",
+    heroDescription:
+      "Nous transformons vos idées en identités visuelles et expériences digitales qui attirent l’attention, racontent votre histoire et valorisent votre activité.",
+    discover: "Découvrir nos services",
+    studio: "Découvrir le studio",
+    heroNote: "CRÉER AVEC SENS. MARQUER LES ESPRITS.",
+    strategy: "STRATÉGIE",
+    creativity: "CRÉATIVITÉ",
+    sectionServices: "CE QUE NOUS FAISONS",
+    servicesTitle: "Le design au service de vos ambitions.",
+    servicesIntro:
+      "Des solutions créatives pensées pour construire une marque cohérente et mémorable.",
+    skillsEyebrow: "SAVOIR-FAIRE",
+    skillsTitle: "Des idées, de la création et du savoir-faire.",
+    skillsIntro:
+      "Graphiste et photographe indépendant depuis 2022, nous donnons forme aux idées avec une approche créative et soignée.",
+    tools: "LES OUTILS QUE NOUS UTILISONS",
+    portfolioEyebrow: "NOTRE UNIVERS CRÉATIF",
+    portfolioTitle: "Nos réalisations",
+    portfolioIntro:
+      "Découvrez une sélection de créations graphiques imaginées pour donner vie aux idées et valoriser les marques.",
+    more: "Voir plus de réalisations",
+    less: "Voir moins",
+    open: "Ouvrir le projet en grand format",
+    close: "Fermer l’aperçu",
+    aboutEyebrow: "L’ESPRIT NAGNOVA",
+    aboutFirst: "Le beau attire.",
+    aboutSecond: "Le sens convainc.",
+    aboutText:
+      "Chaque projet commence par une idée. Notre rôle est de lui donner une forme claire, une personnalité distinctive et une direction visuelle cohérente.",
+    contactEyebrow: "VOTRE PROCHAIN CHAPITRE",
+    contactTitle: "Un projet en tête ?",
+    contactText:
+      "Vous dirigez une entreprise ou possédez un commerce ? Parlons de vos idées et donnons-leur vie à travers une communication visuelle créative, professionnelle et adaptée à votre activité.",
+    name: "Votre nom",
+    namePlaceholder: "Nom et prénom",
+    email: "Votre adresse e-mail",
+    subject: "Sujet",
+    subjectPlaceholder: "Votre projet",
+    message: "Votre message",
+    messagePlaceholder: "Parlez-nous de votre projet…",
+    sending: "Envoi en cours…",
+    send: "Envoyer le message",
+    fallback: "Ouvrir l’e-mail prérempli ↗",
+    footer: "Tous droits réservés.",
+    top: "Retour en haut ↑",
+    backHome: "Retour à l'accueil NAGNOVA DESIGNER",
+    success:
+      "Votre message a bien été envoyé. Merci, nous vous répondrons bientôt !",
+    failed:
+      "L'envoi automatique a échoué. Vous pouvez ouvrir un e-mail prérempli ou réessayer.",
+    config: "EmailJS n'est pas correctement configuré.",
+    tags: ["BRANDING", "DESIGN", "LOGO", "RÉSEAUX SOCIAUX"],
+    skillTools: [
+      "Illustrator · InDesign · Canva",
+      "Photoshop · Lightroom",
+      "Contenu · Réseaux sociaux · Marque",
+      "Notions : Premiere Pro · After Effects",
+    ],
+    emailPlaceholder: "vous@exemple.com",
+    mainNav: "Navigation principale",
+    menuClose: "Fermer le menu",
+    menuOpen: "Ouvrir le menu",
+    services: [
+      [
+        "Identité visuelle",
+        "Construisons une identité visuelle cohérente pour aider votre entreprise à affirmer sa personnalité.",
+      ],
+      [
+        "Design graphique",
+        "Des créations graphiques adaptées à votre activité pour présenter vos produits et vos messages avec clarté.",
+      ],
+      [
+        "Création de logo",
+        "Un logo pensé pour représenter votre activité et rendre votre marque reconnaissable.",
+      ],
+      [
+        "Community management",
+        "Une communication organisée sur les réseaux sociaux pour présenter votre entreprise et garder le lien avec votre public.",
+      ],
+    ],
+    skills: [
+      [
+        "Création graphique",
+        "Identité visuelle, mise en page et déclinaisons adaptées à chaque support.",
+      ],
+      [
+        "Photographie & retouche",
+        "Photographie événementielle, retouche colorimétrique et traitement d’images.",
+      ],
+      [
+        "Communication digitale",
+        "Création de contenus numériques et animation des réseaux sociaux au service des marques.",
+      ],
+      [
+        "Montage vidéo",
+        "Montage vidéo et création de contenus animés pour raconter une idée en mouvement.",
+      ],
+    ],
+    projects: [
+      "Création graphique pour le Nouvel An",
+      "Projet de design Porsche",
+      "Création pour la communication d'un burger",
+      "Création graphique autour des tacos",
+      "Affiche sur le thème du cinéma",
+      "Affiche de spectacle",
+      "Création graphique pour les réseaux sociaux",
+    ],
+    descriptions: [
+      "Création visuelle événementielle.",
+      "Projet de design graphique.",
+      "Visuel promotionnel pour la restauration.",
+      "Visuel promotionnel pour la restauration.",
+      "Création d'affiche inspirée du cinéma.",
+      "Création d'affiche événementielle.",
+      "Communication visuelle digitale.",
+    ],
+  },
+  en: {
+    nav: ["Home", "Services", "Skills", "Portfolio", "About"],
+    contact: "Let’s talk about your project",
+    heroEyebrow: "CREATIVE STUDIO · DESIGN · STRATEGY",
+    heroTitle: "Let’s give your brand",
+    heroAccent: "a bold identity.",
+    heroDescription:
+      "We turn your ideas into visual identities and digital experiences that capture attention, tell your story, and showcase your business.",
+    discover: "Explore our services",
+    studio: "Discover the studio",
+    heroNote: "CREATE WITH PURPOSE. MAKE AN IMPACT.",
+    strategy: "STRATEGY",
+    creativity: "CREATIVITY",
+    sectionServices: "WHAT WE DO",
+    servicesTitle: "Design that brings your ambitions to life.",
+    servicesIntro:
+      "Creative solutions designed to build a consistent, memorable brand.",
+    skillsEyebrow: "OUR EXPERTISE",
+    skillsTitle: "Ideas, creativity, and expertise.",
+    skillsIntro:
+      "Independent graphic designer and photographer since 2022, shaping ideas with a thoughtful, creative approach.",
+    tools: "TOOLS WE USE",
+    portfolioEyebrow: "OUR CREATIVE WORLD",
+    portfolioTitle: "Selected work",
+    portfolioIntro:
+      "Explore a selection of graphic design projects created to bring ideas to life and elevate brands.",
+    more: "See more projects",
+    less: "See less",
+    open: "View project full size",
+    close: "Close preview",
+    aboutEyebrow: "THE NAGNOVA SPIRIT",
+    aboutFirst: "Beauty attracts.",
+    aboutSecond: "Meaning persuades.",
+    aboutText:
+      "Every project starts with an idea. Our role is to give it a clear form, a distinctive personality, and a consistent visual direction.",
+    contactEyebrow: "YOUR NEXT CHAPTER",
+    contactTitle: "Have a project in mind?",
+    contactText:
+      "Run a business or own a shop? Let’s talk about your ideas and bring them to life with creative, professional visual communication tailored to your needs.",
+    name: "Your name",
+    namePlaceholder: "First and last name",
+    email: "Your email address",
+    subject: "Subject",
+    subjectPlaceholder: "Your project",
+    message: "Your message",
+    messagePlaceholder: "Tell us about your project…",
+    sending: "Sending…",
+    send: "Send message",
+    fallback: "Open prefilled email ↗",
+    footer: "All rights reserved.",
+    top: "Back to top ↑",
+    backHome: "Back to NAGNOVA DESIGNER home",
+    success: "Your message has been sent. Thank you—we’ll be in touch soon!",
+    failed:
+      "Automatic sending failed. You can open a prefilled email or try again.",
+    config: "EmailJS is not configured correctly.",
+    tags: ["BRANDING", "DESIGN", "LOGO", "SOCIAL MEDIA"],
+    skillTools: [
+      "Illustrator · InDesign · Canva",
+      "Photoshop · Lightroom",
+      "Content · Social media · Branding",
+      "Basics: Premiere Pro · After Effects",
+    ],
+    emailPlaceholder: "you@example.com",
+    mainNav: "Main navigation",
+    menuClose: "Close menu",
+    menuOpen: "Open menu",
+    services: [
+      [
+        "Visual identity",
+        "Let’s build a consistent visual identity that helps your business express its personality.",
+      ],
+      [
+        "Graphic design",
+        "Graphic design tailored to your business, presenting your products and messages clearly.",
+      ],
+      [
+        "Logo design",
+        "A logo designed to represent your business and make your brand recognizable.",
+      ],
+      [
+        "Social media management",
+        "A thoughtful social media presence to showcase your business and stay connected with your audience.",
+      ],
+    ],
+    skills: [
+      [
+        "Graphic design",
+        "Visual identity, layout, and adaptations for every medium.",
+      ],
+      [
+        "Photography & retouching",
+        "Event photography, color correction, and image editing.",
+      ],
+      [
+        "Digital communication",
+        "Digital content creation and social media management for brands.",
+      ],
+      [
+        "Video editing",
+        "Video editing and motion content that bring ideas to life.",
+      ],
+    ],
+    projects: [
+      "New Year graphic design",
+      "Porsche design project",
+      "Burger promotional design",
+      "Taco promotional design",
+      "Movie-themed poster",
+      "Event poster",
+      "Social media graphic design",
+    ],
+    descriptions: [
+      "Event visual design.",
+      "Graphic design project.",
+      "Promotional food and beverage design.",
+      "Promotional food and beverage design.",
+      "Movie-inspired poster design.",
+      "Event poster design.",
+      "Digital visual communication.",
+    ],
+  },
+};
+
 function Reveal({ children, className = "", delay = 0, ...props }) {
   const [visible, setVisible] = useState(false);
   const elementRef = useRef(null);
@@ -164,6 +412,17 @@ function App() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [formStatus, setFormStatus] = useState({ type: "", message: "" });
   const [sending, setSending] = useState(false);
+  const [language, setLanguage] = useState(() => {
+    const saved = localStorage.getItem("nagnova-language");
+    return saved === "en" ? "en" : "fr";
+  });
+  const t = translations[language];
+
+  useEffect(() => {
+    document.documentElement.lang = language;
+    localStorage.setItem("nagnova-language", language);
+  }, [language]);
+
 
   useEffect(() => {
     const dialog = projectDialogRef.current;
@@ -215,7 +474,7 @@ function App() {
     ) {
       setFormStatus({
         type: "error",
-        message: "EmailJS n'est pas correctement configuré.",
+        message: t.config,
         fallbackHref,
       });
       return;
@@ -240,8 +499,7 @@ function App() {
 
       setFormStatus({
         type: "success",
-        message:
-          "Votre message a bien été envoyé. Merci, nous vous répondrons bientôt !",
+        message: t.success,
       });
     } catch (error) {
       console.error("EmailJS status :", error.status);
@@ -250,8 +508,7 @@ function App() {
 
       setFormStatus({
         type: "error",
-        message:
-          "L'envoi automatique a échoué. Vous pouvez ouvrir un e-mail prérempli ou réessayer.",
+        message: t.failed,
         fallbackHref,
       });
     } finally {
@@ -260,7 +517,7 @@ function App() {
   }
 
   return (
-    <main>
+    <main lang={language}>
       <header className="site-header">
         <a
           className="brand"
@@ -276,7 +533,7 @@ function App() {
         <button
           className="menu-toggle"
           type="button"
-          aria-label={menuOpen ? "Fermer le menu" : "Ouvrir le menu"}
+          aria-label={menuOpen ? t.menuClose : t.menuOpen}
           aria-expanded={menuOpen}
           aria-controls="main-navigation"
           onClick={() => setMenuOpen((open) => !open)}
@@ -288,19 +545,29 @@ function App() {
         <nav
           id="main-navigation"
           className={`navigation${menuOpen ? " is-open" : ""}`}
-          aria-label="Navigation principale"
+          aria-label={t.mainNav}
           onClick={(event) => {
             if (event.target.closest("a")) setMenuOpen(false);
           }}
         >
-          <a href="#accueil">Accueil</a>
-          <a href="#services">Services</a>
-          <a href="#competences">Compétences</a>
-          <a href="#realisations">Réalisations</a>
-          <a href="#apropos">À propos</a>
+          <a href="#accueil">{t.nav[0]}</a>
+          <a href="#services">{t.nav[1]}</a>
+          <a href="#competences">{t.nav[2]}</a>
+          <a href="#realisations">{t.nav[3]}</a>
+          <a href="#apropos">{t.nav[4]}</a>
           <a href="#contact" className="nav-contact">
-            Parlons de votre projet <span>↗</span>
+            {t.contact} <span>↗</span>
           </a>
+          <button
+            type="button"
+            className="language-toggle"
+            aria-label={
+              language === "fr" ? "Switch to English" : "Passer en français"
+            }
+            onClick={() => setLanguage(language === "fr" ? "en" : "fr")}
+          >
+            {language === "fr" ? "EN" : "FR"}
+          </button>
         </nav>
       </header>
 
@@ -308,28 +575,24 @@ function App() {
         <Reveal className="hero-copy">
           <p className="eyebrow">
             <span className="red-dot" />
-            STUDIO CRÉATIF · DESIGN · STRATÉGIE
+            {t.heroEyebrow}
           </p>
           <h1>
-            Donnons à votre marque
-            <span className="headline-accent"> une identité forte.</span>
+            {t.heroTitle}
+            <span className="headline-accent"> {t.heroAccent}</span>
           </h1>
-          <p className="hero-description">
-            Nous transformons vos idées en identités visuelles et expériences
-            digitales qui attirent l’attention, racontent votre histoire et
-            valorisent votre activité.
-          </p>
+          <p className="hero-description">{t.heroDescription}</p>
           <div className="hero-actions">
             <a className="button button-primary" href="#services">
-              Découvrir nos services <span>↗</span>
+              {t.discover} <span>↗</span>
             </a>
             <a className="button button-secondary" href="#apropos">
-              Découvrir le studio
+              {t.studio}
             </a>
           </div>
           <div className="hero-note">
             <span className="note-line" />
-            CRÉER AVEC SENS. MARQUER LES ESPRITS.
+            {t.heroNote}
           </div>
         </Reveal>
         <Reveal
@@ -348,9 +611,9 @@ function App() {
           </div>
           <div className="visual-circle">N</div>
           <div className="visual-label visual-label-bottom">
-            <span>STRATÉGIE</span>
+            <span>{t.strategy}</span>
             <span className="label-divider" />
-            <span>CRÉATIVITÉ</span>
+            <span>{t.creativity}</span>
           </div>
         </Reveal>
       </section>
@@ -359,13 +622,10 @@ function App() {
         <Reveal>
           <div className="section-heading">
             <div>
-              <p className="eyebrow">CE QUE NOUS FAISONS</p>
-              <h2>Le design au service de vos ambitions.</h2>
+              <p className="eyebrow">{t.sectionServices}</p>
+              <h2>{t.servicesTitle}</h2>
             </div>
-            <p className="section-intro">
-              Des solutions créatives pensées pour construire une marque
-              cohérente et mémorable.
-            </p>
+            <p className="section-intro">{t.servicesIntro}</p>
           </div>
         </Reveal>
         <div className="service-grid">
@@ -376,9 +636,9 @@ function App() {
                   <span className="service-number">{service.number}</span>
                   <span className="service-arrow">↗</span>
                 </div>
-                <p className="service-tag">{service.tag}</p>
-                <h3>{service.title}</h3>
-                <p className="service-description">{service.description}</p>
+                <p className="service-tag">{t.tags[index]}</p>
+                <h3>{t.services[index][0]}</h3>
+                <p className="service-description">{t.services[index][1]}</p>
               </article>
             </Reveal>
           ))}
@@ -390,13 +650,10 @@ function App() {
           <Reveal>
             <div className="section-heading">
               <div>
-                <p className="eyebrow">SAVOIR-FAIRE</p>
-                <h2>Des idées, de la création et du savoir-faire.</h2>
+                <p className="eyebrow">{t.skillsEyebrow}</p>
+                <h2>{t.skillsTitle}</h2>
               </div>
-              <p className="section-intro">
-                Graphiste et photographe indépendant depuis 2022, nous donnons
-                forme aux idées avec une approche créative et soignée.
-              </p>
+              <p className="section-intro">{t.skillsIntro}</p>
             </div>
           </Reveal>
           <div className="skills-grid">
@@ -404,15 +661,15 @@ function App() {
               <Reveal key={skill.number} delay={index * 70}>
                 <article className="skill-card">
                   <span className="skill-number">{skill.number}</span>
-                  <h3>{skill.title}</h3>
-                  <p>{skill.description}</p>
-                  <span className="skill-tools">{skill.tools}</span>
+                  <h3>{t.skills[index][0]}</h3>
+                  <p>{t.skills[index][1]}</p>
+                  <span className="skill-tools">{t.skillTools[index]}</span>
                 </article>
               </Reveal>
             ))}
           </div>
           <div className="technology-carousel">
-            <p className="technology-caption">LES OUTILS QUE NOUS UTILISONS</p>
+            <p className="technology-caption">{t.tools}</p>
             <div className="technology-marquee">
               <div className="technology-track">
                 {[0, 1].map((copy) => (
@@ -446,13 +703,10 @@ function App() {
         <Reveal>
           <div className="section-heading">
             <div>
-              <p className="eyebrow">NOTRE UNIVERS CRÉATIF</p>
-              <h2>Nos réalisations</h2>
+              <p className="eyebrow">{t.portfolioEyebrow}</p>
+              <h2>{t.portfolioTitle}</h2>
             </div>
-            <p className="section-intro">
-              Découvrez une sélection de créations graphiques imaginées pour
-              donner vie aux idées et valoriser les marques.
-            </p>
+            <p className="section-intro">{t.portfolioIntro}</p>
           </div>
         </Reveal>
         <div className="portfolio-grid">
@@ -464,8 +718,15 @@ function App() {
                   <button
                     type="button"
                     className="portfolio-image-trigger"
-                    aria-label={`Ouvrir ${project.title} en grand format`}
-                    onClick={() => setActiveProject(project)}
+                    aria-label={t.open}
+                    onClick={() =>
+                      setActiveProject({
+                        ...project,
+                        title: t.projects[index],
+                        alt: t.projects[index],
+                        description: t.descriptions[index],
+                      })
+                    }
                   >
                     <img
                       src={`/realisations/${project.image}`}
@@ -473,8 +734,8 @@ function App() {
                       loading="lazy"
                     />
                   </button>
-                  <h3>{project.title}</h3>
-                  <p>{project.description}</p>
+                  <h3>{t.projects[index]}</h3>
+                  <p>{t.descriptions[index]}</p>
                 </article>
               </Reveal>
             ))}
@@ -487,7 +748,7 @@ function App() {
               aria-expanded={showAllProjects}
               onClick={() => setShowAllProjects((value) => !value)}
             >
-              {showAllProjects ? "Voir moins" : "Voir plus de réalisations"}
+              {showAllProjects ? t.less : t.more}
             </button>
           </div>
         )}
@@ -507,7 +768,7 @@ function App() {
               <button
                 type="button"
                 className="portfolio-lightbox-close"
-                aria-label="Fermer l’aperçu"
+                aria-label={t.close}
                 onClick={() => setActiveProject(null)}
               >
                 <span aria-hidden="true">×</span>
@@ -530,28 +791,21 @@ function App() {
         <Reveal className="section-wrap about-inner">
           <p className="eyebrow">
             <span className="red-dot" />
-            L’ESPRIT NAGNOVA
+            {t.aboutEyebrow}
           </p>
           <h2>
-            Le beau attire.<span> Le sens convainc.</span>
+            {t.aboutFirst}
+            <span> {t.aboutSecond}</span>
           </h2>
-          <p>
-            Chaque projet commence par une idée. Notre rôle est de lui donner
-            une forme claire, une personnalité distinctive et une direction
-            visuelle cohérente.
-          </p>
+          <p>{t.aboutText}</p>
         </Reveal>
       </section>
 
       <section className="contact-section section-wrap" id="contact">
         <Reveal className="contact-copy">
-          <p className="eyebrow">VOTRE PROCHAIN CHAPITRE</p>
-          <h2>Un projet en tête ?</h2>
-          <p>
-            Vous dirigez une entreprise ou possédez un commerce ? Parlons de vos
-            idées et donnons-leur vie à travers une communication visuelle
-            créative, professionnelle et adaptée à votre activité.
-          </p>
+          <p className="eyebrow">{t.contactEyebrow}</p>
+          <h2>{t.contactTitle}</h2>
+          <p>{t.contactText}</p>
           <div className="contact-actions">
             <a
               className="button button-secondary"
@@ -577,38 +831,38 @@ function App() {
             className="contact-form"
             onSubmit={handleContactSubmit}
           >
-            <label htmlFor="contact-name">Votre nom</label>
+            <label htmlFor="contact-name">{t.name}</label>
             <input
               id="contact-name"
               name="from_name"
               type="text"
               autoComplete="name"
-              placeholder="Nom et prénom"
+              placeholder={t.namePlaceholder}
               required
             />
-            <label htmlFor="contact-email">Votre adresse e-mail</label>
+            <label htmlFor="contact-email">{t.email}</label>
             <input
               id="contact-email"
               name="reply_to"
               type="email"
               autoComplete="email"
-              placeholder="vous@exemple.com"
+              placeholder={t.emailPlaceholder}
               required
             />
-            <label htmlFor="contact-subject">Sujet</label>
+            <label htmlFor="contact-subject">{t.subject}</label>
             <input
               id="contact-subject"
               name="subject"
               type="text"
-              placeholder="Votre projet"
+              placeholder={t.subjectPlaceholder}
               required
             />
-            <label htmlFor="contact-message">Votre message</label>
+            <label htmlFor="contact-message">{t.message}</label>
             <textarea
               id="contact-message"
               name="message"
               rows="5"
-              placeholder="Parlez-nous de votre projet…"
+              placeholder={t.messagePlaceholder}
               required
             />
             <button
@@ -616,7 +870,7 @@ function App() {
               type="submit"
               disabled={sending}
             >
-              {sending ? "Envoi en cours…" : "Envoyer le message"}
+              {sending ? t.sending : t.send}
               <span>↗</span>
             </button>
             {formStatus.message && (
@@ -624,7 +878,7 @@ function App() {
                 {formStatus.message}
                 {formStatus.fallbackHref && (
                   <a className="form-fallback" href={formStatus.fallbackHref}>
-                    Ouvrir l’e-mail prérempli ↗
+                    {t.fallback}
                   </a>
                 )}
               </p>
@@ -645,8 +899,10 @@ function App() {
             alt="NAGNOVA DESIGNER"
           />
         </a>
-        <p>© {new Date().getFullYear()} NAGNOVA. Tous droits réservés.</p>
-        <a href="#accueil">Retour en haut ↑</a>
+        <p>
+          © {new Date().getFullYear()} NAGNOVA. {t.footer}
+        </p>
+        <a href="#accueil">{t.top}</a>
       </footer>
     </main>
   );

@@ -1,4 +1,4 @@
-:root {
+﻿:root {
   --ink: #111111;
   --muted: #6c6b69;
   --paper: #f6f5f2;
@@ -104,6 +104,24 @@ main {
 }
 .navigation .nav-contact:hover span {
   color: #ffffff;
+}
+.language-toggle {
+  min-width: 42px;
+  min-height: 38px;
+  padding: 0 10px;
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  background: #fff;
+  color: var(--ink);
+  font: inherit;
+  font-size: 12px;
+  font-weight: 750;
+  cursor: pointer;
+}
+.language-toggle:hover,
+.language-toggle:focus-visible {
+  border-color: var(--red);
+  color: var(--red);
 }
 .nav-contact span {
   margin-left: 8px;
@@ -991,6 +1009,7 @@ main {
   border-top: 1px solid var(--line);
   background: #fff;
 }
+
 .footer-logo {
   display: block;
   width: 150px;

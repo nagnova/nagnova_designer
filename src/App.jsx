@@ -158,10 +158,23 @@ function Reveal({ children, className = "", delay = 0, ...props }) {
 
 function App() {
   const formRef = useRef(null);
+  const projectDialogRef = useRef(null);
   const [showAllProjects, setShowAllProjects] = useState(false);
+  const [activeProject, setActiveProject] = useState(null);
   const [menuOpen, setMenuOpen] = useState(false);
   const [formStatus, setFormStatus] = useState({ type: "", message: "" });
   const [sending, setSending] = useState(false);
+
+  useEffect(() => {
+    const dialog = projectDialogRef.current;
+    if (!dialog) return;
+
+    if (activeProject && !dialog.open) {
+      dialog.showModal();
+    } else if (!activeProject && dialog.open) {
+      dialog.close();
+    }
+  }, [activeProject]);
 
   async function handleContactSubmit(event) {
     event.preventDefault();
@@ -448,11 +461,18 @@ function App() {
             .map((project, index) => (
               <Reveal key={project.image} delay={(index % 3) * 80}>
                 <article className="portfolio-card">
-                  <img
-                    src={`/realisations/${project.image}`}
-                    alt={project.alt}
-                    loading="lazy"
-                  />
+                  <button
+                    type="button"
+                    className="portfolio-image-trigger"
+                    aria-label={`Ouvrir ${project.title} en grand format`}
+                    onClick={() => setActiveProject(project)}
+                  >
+                    <img
+                      src={`/realisations/${project.image}`}
+                      alt=""
+                      loading="lazy"
+                    />
+                  </button>
                   <h3>{project.title}</h3>
                   <p>{project.description}</p>
                 </article>
@@ -471,6 +491,39 @@ function App() {
             </button>
           </div>
         )}
+        <dialog
+          ref={projectDialogRef}
+          className="portfolio-lightbox"
+          aria-labelledby="portfolio-lightbox-title"
+          onClick={(event) => {
+            if (event.target === event.currentTarget) {
+              setActiveProject(null);
+            }
+          }}
+          onClose={() => setActiveProject(null)}
+        >
+          {activeProject && (
+            <>
+              <button
+                type="button"
+                className="portfolio-lightbox-close"
+                aria-label="Fermer l’aperçu"
+                onClick={() => setActiveProject(null)}
+              >
+                <span aria-hidden="true">×</span>
+              </button>
+              <img
+                className="portfolio-lightbox-image"
+                src={`/realisations/${activeProject.image}`}
+                alt={activeProject.alt}
+              />
+              <div className="portfolio-lightbox-caption">
+                <h2 id="portfolio-lightbox-title">{activeProject.title}</h2>
+                <p>{activeProject.description}</p>
+              </div>
+            </>
+          )}
+        </dialog>
       </section>
 
       <section className="about-section" id="apropos">

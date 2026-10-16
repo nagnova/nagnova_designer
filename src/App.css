@@ -764,76 +764,119 @@ main {
   max-width: none;
   max-height: 90vh;
   margin: auto;
-  padding: clamp(18px, 3vw, 32px);
+  padding: clamp(18px, 3vw, 30px);
   overflow: auto;
-  border: 1px solid rgb(255 255 255 / 18%);
-  border-radius: 10px;
-  background: #0a0a0a;
-  color: #ffffff;
+  border: 1px solid #e5e1dc;
+  border-radius: 14px;
+  background: #fbfaf8;
+  color: #252321;
+  box-shadow: 0 28px 90px rgb(0 0 0 / 24%);
 }
 .portfolio-lightbox::backdrop {
-  background: rgb(10 10 10 / 82%);
-  backdrop-filter: blur(4px);
+  background: rgb(24 22 20 / 58%);
+  backdrop-filter: blur(6px);
+  animation: portfolio-backdrop-enter 220ms ease-out both;
 }
 .portfolio-lightbox[open] {
-  animation: portfolio-lightbox-enter 220ms ease-out both;
+  animation: portfolio-lightbox-enter 260ms cubic-bezier(0.2, 0.75, 0.25, 1) both;
+}
+.portfolio-lightbox.is-closing {
+  animation: portfolio-lightbox-exit 180ms ease-in both;
+}
+.portfolio-lightbox.is-closing::backdrop {
+  animation: portfolio-backdrop-exit 180ms ease-in both;
+}
+.portfolio-lightbox-stage {
+  min-height: min(58vh, 620px);
+  margin: 22px 0 20px;
+  padding: clamp(12px, 2vw, 24px);
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  border: 1px solid #e8e4de;
+  border-radius: 9px;
+  background: #efede9;
 }
 .portfolio-lightbox-image {
   display: block;
   width: auto;
   max-width: 100%;
-  max-height: min(72vh, 760px);
-  margin: 28px auto 18px;
+  max-height: min(68vh, 680px);
+  margin: 0 auto;
   object-fit: contain;
-  border-radius: 2px;
-  background: #ffffff;
+  border-radius: 4px;
+  background: transparent;
+  box-shadow: 0 8px 28px rgb(35 31 27 / 10%);
 }
 .portfolio-lightbox-caption {
   text-align: center;
 }
 .portfolio-lightbox-caption h2 {
   margin: 0 0 6px;
-  color: #ffffff;
+  color: #252321;
   font: 700 20px/1.35 "Montserrat", sans-serif;
 }
 .portfolio-lightbox-caption p {
   margin: 0;
-  color: #d0d0d0;
+  color: #77716a;
   font-size: 14px;
   line-height: 1.6;
 }
 .portfolio-lightbox-close {
   position: absolute;
-  top: 12px;
-  right: 12px;
+  top: 14px;
+  right: 14px;
   display: grid;
-  width: 44px;
-  height: 44px;
+  width: 42px;
+  height: 42px;
   place-items: center;
-  border: 1px solid rgb(255 255 255 / 36%);
+  border: 1px solid #dedad4;
   border-radius: 50%;
-  background: #0a0a0a;
-  color: #ffffff;
-  font: 32px/1 sans-serif;
+  background: #fff;
+  color: #36322e;
+  font: 28px/1 sans-serif;
   cursor: pointer;
+  box-shadow: 0 3px 12px rgb(35 31 27 / 10%);
+  transition:
+    color 180ms ease,
+    background 180ms ease,
+    border-color 180ms ease,
+    transform 180ms ease,
+    box-shadow 180ms ease;
 }
 .portfolio-lightbox-close:hover {
   border-color: var(--red);
   background: var(--red);
+  color: #fff;
+  transform: rotate(90deg) scale(1.06);
+  box-shadow: 0 5px 16px rgb(229 9 20 / 25%);
 }
 .portfolio-lightbox-close:focus-visible {
-  outline: 3px solid #ffffff;
+  outline: 3px solid var(--red);
   outline-offset: 3px;
 }
 @keyframes portfolio-lightbox-enter {
   from {
     opacity: 0;
-    transform: scale(0.96);
+    transform: translateY(14px) scale(0.98);
   }
   to {
     opacity: 1;
-    transform: scale(1);
+    transform: translateY(0) scale(1);
   }
+}
+@keyframes portfolio-lightbox-exit {
+  to {
+    opacity: 0;
+    transform: translateY(8px) scale(0.985);
+  }
+}
+@keyframes portfolio-backdrop-enter {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes portfolio-backdrop-exit {
+  to { opacity: 0; }
 }
 .portfolio-more {
   display: flex;
@@ -1209,8 +1252,13 @@ main {
     max-height: 90vh;
     padding: 62px 14px 18px;
   }
+  .portfolio-lightbox-stage {
+    min-height: 0;
+    margin-top: 0;
+    padding: 10px;
+  }
   .portfolio-lightbox-image {
-    max-height: 62vh;
+    max-height: 56vh;
   }
   .portfolio-lightbox-caption h2 {
     font-size: 18px;

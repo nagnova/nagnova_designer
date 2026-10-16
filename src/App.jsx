@@ -409,6 +409,7 @@ function App() {
   const projectDialogRef = useRef(null);
   const [showAllProjects, setShowAllProjects] = useState(false);
   const [activeProject, setActiveProject] = useState(null);
+  const [closingProject, setClosingProject] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [formStatus, setFormStatus] = useState({ type: "", message: "" });
   const [sending, setSending] = useState(false);
@@ -417,6 +418,15 @@ function App() {
     return saved === "en" ? "en" : "fr";
   });
   const t = translations[language];
+
+  function closeProjectPreview() {
+    if (!activeProject || closingProject) return;
+    setClosingProject(true);
+    window.setTimeout(() => {
+      setActiveProject(null);
+      setClosingProject(false);
+    }, 180);
+  }
 
   useEffect(() => {
     document.documentElement.lang = language;
@@ -754,14 +764,17 @@ function App() {
         )}
         <dialog
           ref={projectDialogRef}
-          className="portfolio-lightbox"
+          className={`portfolio-lightbox${closingProject ? " is-closing" : ""}`}
           aria-labelledby="portfolio-lightbox-title"
           onClick={(event) => {
             if (event.target === event.currentTarget) {
-              setActiveProject(null);
+              closeProjectPreview();
             }
           }}
-          onClose={() => setActiveProject(null)}
+          onClose={() => {
+            setActiveProject(null);
+            setClosingProject(false);
+          }}
         >
           {activeProject && (
             <>
@@ -769,15 +782,17 @@ function App() {
                 type="button"
                 className="portfolio-lightbox-close"
                 aria-label={t.close}
-                onClick={() => setActiveProject(null)}
+                onClick={closeProjectPreview}
               >
                 <span aria-hidden="true">×</span>
               </button>
-              <img
-                className="portfolio-lightbox-image"
-                src={`/realisations/${activeProject.image}`}
-                alt={activeProject.alt}
-              />
+              <div className="portfolio-lightbox-stage">
+                <img
+                  className="portfolio-lightbox-image"
+                  src={`/realisations/${activeProject.image}`}
+                  alt={activeProject.alt}
+                />
+              </div>
               <div className="portfolio-lightbox-caption">
                 <h2 id="portfolio-lightbox-title">{activeProject.title}</h2>
                 <p>{activeProject.description}</p>

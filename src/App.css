@@ -683,17 +683,16 @@ main {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 22px;
-  align-items: stretch;
+  align-items: start;
 }
 .portfolio-grid > .reveal {
   height: 100%;
 }
 .portfolio-card {
-  height: 100%;
   min-width: 0;
   overflow: hidden;
-  border: 1px solid #e8e6e2;
-  background: #fff;
+  border: 1px solid rgb(10 10 10 / 10%);
+  background: #ffffff;
   transition:
     transform 220ms ease,
     box-shadow 220ms ease,
@@ -701,23 +700,19 @@ main {
 }
 .portfolio-card:hover {
   transform: translateY(-5px);
-  border-color: #d5d0c9;
+  border-color: var(--red);
   box-shadow: 0 16px 34px #1d17140f;
 }
 .portfolio-card img {
   display: block;
   width: 100%;
-  aspect-ratio: 1.12;
+  aspect-ratio: 1;
   object-fit: contain;
-  background: #eeece8;
-  transition: transform 380ms ease;
-}
-.portfolio-card:hover img {
-  transform: scale(1.025);
+  background: #ffffff;
 }
 .portfolio-card h3 {
   margin: 17px 18px 6px;
-  color: var(--ink);
+  color: #0a0a0a;
   font:
     700 17px/1.35 "Montserrat",
     sans-serif;
@@ -747,6 +742,9 @@ main {
   transition:
     background 180ms ease,
     transform 180ms ease;
+}
+.portfolio-more .btn:focus-visible {
+  outline-color: var(--red);
 }
 .portfolio-more .btn:hover {
   transform: translateY(-2px);
@@ -943,6 +941,9 @@ main {
   .section-wrap {
     width: min(calc(100% - 8%), var(--content-width));
   }
+  .portfolio-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
   .skills-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -1080,11 +1081,7 @@ main {
     padding: 64px 0 70px;
   }
   .portfolio-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 14px;
-  }
-  .portfolio-card img {
-    aspect-ratio: 0.95;
   }
   .portfolio-card h3 {
     margin: 14px 13px 5px;
@@ -1092,7 +1089,7 @@ main {
   }
   .portfolio-card p {
     margin: 0 13px 16px;
-    font-size: 12px;
+    font-size: 13px;
   }
   .about-section {
     padding: 76px 0;
@@ -1175,9 +1172,6 @@ main {
   }
   .skill-number {
     margin-bottom: 18px;
-  }
-  .portfolio-card img {
-    aspect-ratio: 1.12;
   }
   .contact-form {
     padding: 20px;

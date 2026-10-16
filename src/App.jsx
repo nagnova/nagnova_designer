@@ -35,43 +35,43 @@ const services = [
 
 const projects = [
   {
-    image: "new-years.jpg",
+    image: "new-years.webp",
     alt: "Création graphique pour le Nouvel An",
     title: "New Year's",
     description: "Création visuelle événementielle.",
   },
   {
-    image: "porshe-design.jpg",
+    image: "porshe-design.webp",
     alt: "Projet de design Porsche",
     title: "Porsche Design",
     description: "Projet de design graphique.",
   },
   {
-    image: "social-design-burger.jpg",
+    image: "social-design-burger.webp",
     alt: "Création pour la communication d'un burger",
     title: "Social Design — Burger",
     description: "Visuel promotionnel pour la restauration.",
   },
   {
-    image: "tacos.jpg",
+    image: "tacos.webp",
     alt: "Création graphique autour des tacos",
     title: "Tacos",
     description: "Visuel promotionnel pour la restauration.",
   },
   {
-    image: "poster-movies.jpg",
+    image: "poster-movies.webp",
     alt: "Affiche sur le thème du cinéma",
     title: "Poster Movies",
     description: "Création d'affiche inspirée du cinéma.",
   },
   {
-    image: "show-poster.jpg",
+    image: "show-poster.webp",
     alt: "Affiche de spectacle",
     title: "Show Poster",
     description: "Création d'affiche événementielle.",
   },
   {
-    image: "social-design.png",
+    image: "social-design.webp",
     alt: "Création graphique pour les réseaux sociaux",
     title: "Social Design",
     description: "Communication visuelle digitale.",

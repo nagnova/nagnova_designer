@@ -574,7 +574,10 @@ function App() {
             aria-label={
               language === "fr" ? "Switch to English" : "Passer en français"
             }
-            onClick={() => setLanguage(language === "fr" ? "en" : "fr")}
+            onClick={() => {
+              setLanguage(language === "fr" ? "en" : "fr");
+              setMenuOpen(false);
+            }}
           >
             {language === "fr" ? "EN" : "FR"}
           </button>

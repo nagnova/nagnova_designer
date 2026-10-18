@@ -433,7 +433,6 @@ function App() {
     localStorage.setItem("nagnova-language", language);
   }, [language]);
 
-
   useEffect(() => {
     const dialog = projectDialogRef.current;
     if (!dialog) return;
@@ -540,18 +539,30 @@ function App() {
             alt="NAGNOVA DESIGNER — logo officiel"
           />
         </a>
-        <button
-          className="menu-toggle"
-          type="button"
-          aria-label={menuOpen ? t.menuClose : t.menuOpen}
-          aria-expanded={menuOpen}
-          aria-controls="main-navigation"
-          onClick={() => setMenuOpen((open) => !open)}
-        >
-          <span />
-          <span />
-          <span />
-        </button>
+        <div className="header-controls">
+          <button
+            type="button"
+            className="language-toggle language-toggle-mobile"
+            aria-label={
+              language === "fr" ? "Switch to English" : "Passer en français"
+            }
+            onClick={() => setLanguage(language === "fr" ? "en" : "fr")}
+          >
+            {language === "fr" ? "EN" : "FR"}
+          </button>
+          <button
+            className="menu-toggle"
+            type="button"
+            aria-label={menuOpen ? t.menuClose : t.menuOpen}
+            aria-expanded={menuOpen}
+            aria-controls="main-navigation"
+            onClick={() => setMenuOpen((open) => !open)}
+          >
+            <span />
+            <span />
+            <span />
+          </button>
+        </div>
         <nav
           id="main-navigation"
           className={`navigation${menuOpen ? " is-open" : ""}`}
@@ -612,17 +623,16 @@ function App() {
           className="hero-visual"
           delay={120}
           role="img"
-          aria-label="Composition graphique abstraite"
+          aria-label="Composition graphique animée avec le N de NAGNOVA"
         >
           <div className="visual-grid" />
           <div className="visual-label visual-label-top">
             N° 01 — DESIGN STUDIO
           </div>
-          <div className="visual-shape">
-            <span className="shape-letter">N</span>
-            <span className="shape-slash" />
+          <div className="visual-logo-wrap" aria-hidden="true">
+            <img className="visual-logo" src="/LG-n-noir-03.png" alt="" />
+            <span className="visual-logo-grid" />
           </div>
-          <div className="visual-circle">N</div>
           <div className="visual-label visual-label-bottom">
             <span>{t.strategy}</span>
             <span className="label-divider" />

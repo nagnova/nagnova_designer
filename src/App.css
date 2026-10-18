@@ -1,5 +1,5 @@
 ﻿:root {
-  --ink: #111111;
+  --ink: #0a0a0a;
   --muted: #6c6b69;
   --paper: #f6f5f2;
   --line: #e7e5e1;
@@ -47,6 +47,14 @@ main {
 .menu-toggle {
   display: none;
 }
+.header-controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.language-toggle-mobile {
+  display: none;
+}
 .navigation {
   display: flex;
   align-items: center;
@@ -87,6 +95,7 @@ main {
   text-decoration: none;
   font-size: 13px;
   font-weight: 600;
+  font-family: "Poppins", sans-serif;
   transition:
     color 180ms ease,
     background 180ms ease,
@@ -128,9 +137,7 @@ main {
   border-radius: 5px;
   background: #fff;
   color: var(--ink);
-  font: inherit;
-  font-size: 12px;
-  font-weight: 750;
+  font: 600 12px "Poppins", sans-serif;
   cursor: pointer;
 }
 .language-toggle:hover,
@@ -233,9 +240,7 @@ main {
   border: 1px solid transparent;
   border-radius: 4px;
   text-decoration: none;
-  font:
-    700 13px/1.2 "Inter",
-    sans-serif;
+  font: 600 13px/1.2 "Poppins", sans-serif;
   cursor: pointer;
   transition:
     transform 200ms var(--ease-out),
@@ -306,7 +311,7 @@ main {
   position: absolute;
   z-index: -1;
   content: "";
-  border: 1px solid #ffffff14;
+  border: 1px solid #ffffff0c;
   border-radius: 50%;
 }
 .hero-visual::before {
@@ -321,7 +326,7 @@ main {
   position: absolute;
   z-index: -2;
   inset: 0;
-  opacity: 0.32;
+  opacity: 0.25;
   background-image:
     linear-gradient(#ffffff0b 1px, transparent 1px),
     linear-gradient(90deg, #ffffff0b 1px, transparent 1px);
@@ -352,44 +357,38 @@ main {
   height: 1px;
   background: var(--red);
 }
-.visual-shape {
-  width: 220px;
-  height: 220px;
+.visual-logo-wrap {
+  width: min(76%, 300px);
   position: relative;
-  display: grid;
-  place-items: center;
-  transform: rotate(-8deg);
-  background: var(--red);
-  box-shadow: 22px 24px 0 #ffffff0d;
+  z-index: 1;
+  aspect-ratio: 1;
 }
-.shape-letter {
-  color: #fff;
-  font:
-    800 158px/1 "Montserrat",
-    sans-serif;
-}
-.shape-slash {
-  width: 22px;
-  height: 280px;
+.visual-logo {
   position: absolute;
-  top: -30px;
-  right: 22px;
-  transform: rotate(18deg);
-  background: #111;
+  inset: 6%;
+  display: block;
+  width: 88%;
+  height: 88%;
+  object-fit: contain;
+  mix-blend-mode: screen;
+  filter: drop-shadow(0 14px 28px #0006);
 }
-.visual-circle {
-  width: 68px;
-  height: 68px;
+.visual-logo-grid {
   position: absolute;
-  top: 66px;
-  right: 34px;
-  display: grid;
-  place-items: center;
-  border: 1px solid #fff;
-  border-radius: 50%;
-  background: #111;
-  color: #fff;
-  font-weight: 800;
+  z-index: 2;
+  inset: 6%;
+  opacity: 0.12;
+  pointer-events: none;
+  background-image:
+    linear-gradient(#fff 1px, transparent 1px),
+    linear-gradient(90deg, #fff 1px, transparent 1px);
+  background-size: 14px 14px;
+  mix-blend-mode: screen;
+  mask-image: url("/LG-n-noir-03.png");
+  mask-mode: luminance;
+  mask-position: center;
+  mask-repeat: no-repeat;
+  mask-size: contain;
 }
 
 /* Animation douce de la composition graphique du hero */
@@ -402,11 +401,8 @@ main {
 .hero-visual.is-visible::after {
   animation: ring-breathe 9s ease-in-out -4.5s infinite reverse;
 }
-.hero-visual.is-visible .visual-shape {
-  animation: shape-float 6.5s ease-in-out infinite;
-}
-.hero-visual.is-visible .visual-circle {
-  animation: circle-float 5s ease-in-out -1.5s infinite;
+.hero-visual.is-visible .visual-logo-wrap {
+  animation: logo-float 7s ease-in-out infinite;
 }
 .hero-visual.is-visible .label-divider {
   animation: divider-pulse 4s ease-in-out infinite;
@@ -423,32 +419,22 @@ main {
 @keyframes ring-breathe {
   0%,
   100% {
-    opacity: 0.65;
+    opacity: 0.4;
     transform: scale(1);
   }
   50% {
-    opacity: 1;
-    transform: scale(1.045);
+    opacity: 0.7;
+    transform: scale(1.025);
   }
 }
 
-@keyframes shape-float {
+@keyframes logo-float {
   0%,
   100% {
-    transform: translateY(0) rotate(-8deg);
+    transform: translateY(0) rotate(-0.8deg);
   }
   50% {
-    transform: translateY(-8px) rotate(-5deg);
-  }
-}
-
-@keyframes circle-float {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(9px);
+    transform: translateY(-6px) rotate(0.8deg);
   }
 }
 
@@ -940,9 +926,7 @@ main {
   border-radius: 4px;
   background: var(--ink);
   color: #fff;
-  font:
-    700 13px "Inter",
-    sans-serif;
+  font: 600 13px "Poppins", sans-serif;
   cursor: pointer;
   transition:
     background 180ms ease,
@@ -1190,6 +1174,15 @@ main {
     background: #fff;
     cursor: pointer;
   }
+  .language-toggle-mobile {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .navigation .language-toggle {
+    display: none;
+  }
   .menu-toggle span {
     width: 22px;
     height: 2px;
@@ -1279,6 +1272,15 @@ main {
     border-radius: 6px;
     background: #fff;
     cursor: pointer;
+  }
+  .language-toggle-mobile {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .navigation .language-toggle {
+    display: none;
   }
   .menu-toggle span {
     width: 22px;
@@ -1465,20 +1467,8 @@ main {
   .hero-visual {
     min-height: 270px;
   }
-  .visual-shape {
-    width: 165px;
-    height: 165px;
-  }
-  .shape-letter {
-    font-size: 120px;
-  }
-  .shape-slash {
-    height: 220px;
-    right: 15px;
-  }
-  .visual-circle {
-    top: 48px;
-    right: 18px;
+  .visual-logo-wrap {
+    width: min(74%, 225px);
   }
   .section-wrap {
     width: min(calc(100% - 10%), var(--content-width));

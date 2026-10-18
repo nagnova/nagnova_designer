@@ -916,21 +916,41 @@ function App() {
       </section>
 
       <footer className="site-footer">
-        <a
-          className="footer-brand"
-          href="#accueil"
-          aria-label="Retour à l'accueil NAGNOVA DESIGNER"
-        >
-          <img
-            className="footer-logo"
-            src="/logo-nagnova.png"
-            alt="NAGNOVA DESIGNER"
-          />
-        </a>
-        <p>
-          © {new Date().getFullYear()} NAGNOVA. {t.footer}
-        </p>
-        <a href="#accueil">{t.top}</a>
+        <div className="footer-main">
+          <div className="footer-brand-block">
+            <a
+              className="footer-brand"
+              href="#accueil"
+              aria-label={t.backHome}
+            >
+              <img
+                className="footer-logo"
+                src="/logo-nagnova.png"
+                alt="NAGNOVA DESIGNER"
+              />
+            </a>
+            <p className="footer-tagline">{t.heroNote}</p>
+          </div>
+          <nav className="footer-navigation" aria-label={t.mainNav}>
+            <a href="#accueil">{t.nav[0]}</a>
+            <a href="#services">{t.nav[1]}</a>
+            <a href="#competences">{t.nav[2]}</a>
+            <a href="#realisations">{t.nav[3]}</a>
+            <a href="#apropos">{t.nav[4]}</a>
+          </nav>
+          <div className="footer-actions">
+            <a className="footer-contact" href="#contact">
+              {t.contact} <span aria-hidden="true">↗</span>
+            </a>
+            <a className="footer-top-link" href="#accueil">{t.top}</a>
+          </div>
+        </div>
+        <div className="footer-bottom">
+          <p>
+            © {new Date().getFullYear()} NAGNOVA. {t.footer}
+          </p>
+          <span>{t.strategy} · {t.creativity}</span>
+        </div>
       </footer>
     </main>
   );

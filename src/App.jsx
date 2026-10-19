@@ -124,13 +124,11 @@ const technologies = [
 
 const translations = {
   fr: {
-    nav: ["Accueil", "Services", "Compétences", "Réalisations", "À propos"],
+    nav: ["Accueil", "À propos", "Services", "Compétences", "Réalisations"],
     contact: "Parlons de votre projet",
     heroEyebrow: "STUDIO CRÉATIF · DESIGN · STRATÉGIE",
     heroTitle: "Donnons à votre marque",
     heroAccent: "une identité forte.",
-    heroDescription:
-      "Nous transformons vos idées en identités visuelles et expériences digitales qui attirent l’attention, racontent votre histoire et valorisent votre activité.",
     discover: "Découvrir nos services",
     studio: "Découvrir le studio",
     heroNote: "CRÉER AVEC SENS. MARQUER LES ESPRITS.",
@@ -143,7 +141,7 @@ const translations = {
     skillsEyebrow: "SAVOIR-FAIRE",
     skillsTitle: "Des idées, de la création et du savoir-faire.",
     skillsIntro:
-      "Graphiste et photographe indépendant depuis 2022, nous donnons forme aux idées avec une approche créative et soignée.",
+      "Nous donnons forme aux idées avec une approche créative et soignée, en associant design graphique et photographie.",
     tools: "LES OUTILS QUE NOUS UTILISONS",
     portfolioEyebrow: "NOTRE UNIVERS CRÉATIF",
     portfolioTitle: "Nos réalisations",
@@ -153,11 +151,53 @@ const translations = {
     less: "Voir moins",
     open: "Ouvrir le projet en grand format",
     close: "Fermer l’aperçu",
-    aboutEyebrow: "L’ESPRIT NAGNOVA",
-    aboutFirst: "Le beau attire.",
-    aboutSecond: "Le sens convainc.",
-    aboutText:
-      "Chaque projet commence par une idée. Notre rôle est de lui donner une forme claire, une personnalité distinctive et une direction visuelle cohérente.",
+    aboutEyebrow: "À PROPOS",
+    aboutTitleLines: [
+      "Designer graphique,",
+      "bâtisseur",
+      "d’identités de marque.",
+    ],
+    aboutName: "NAGNOVA Houssen bin Yliasse",
+    aboutRole: "Designer graphique & créatif visuel",
+    aboutBio:
+      "Je suis le fondateur de NAGNOVA, un studio de design graphique qui transforme des idées en systèmes visuels clairs, cohérents et mémorables. Depuis 2022, je travaille comme graphiste et photographe indépendant. Chaque projet s’appuie sur une structure solide, une identité forte et une exécution soignée.",
+    aboutBioSecond:
+      "Du logo à la charte graphique complète, en passant par les supports de communication et l’édition imprimée, je conçois des identités pensées pour durer, rigoureuses dans la grille et audacieuses dans l’exécution.",
+    aboutMantra: ["Le beau attire.", "Le sens convainc."],
+    aboutPhotoBadgeValue: "04+",
+    aboutPhotoBadge: "ANS D’EXPÉRIENCE",
+    aboutVision: "Ma vision",
+    aboutVisionText:
+      "Créer des designs qui ne se contentent pas d’être beaux, mais qui ont un objectif, racontent une histoire et permettent aux marques de se distinguer.",
+    aboutExpertise: "Mes domaines de création",
+    aboutExpertises: [
+      "Identité visuelle et branding",
+      "Design UI/UX",
+      "Affiches publicitaires et supports de communication",
+      "Illustration",
+    ],
+    aboutMethodEyebrow: "MÉTHODE DE TRAVAIL",
+    aboutMethodTitle: "Comment je travaille",
+    aboutMethodSteps: [
+      [
+        "Découverte",
+        "Analyse du besoin, de la marque et de son marché pour poser des bases solides.",
+      ],
+      [
+        "Concept",
+        "Exploration créative : moodboards, pistes graphiques et premières directions visuelles.",
+      ],
+      [
+        "Création",
+        "Construction du système visuel : logo, couleurs, typographie et éléments graphiques.",
+      ],
+      [
+        "Livraison",
+        "Remise des fichiers finaux et des éléments graphiques prévus pour le projet, prêts à être utilisés.",
+      ],
+    ],
+    aboutPhotoPlaceholder: "Emplacement pour votre photo professionnelle",
+    aboutContact: "Parlons de votre projet",
     contactEyebrow: "VOTRE PROCHAIN CHAPITRE",
     contactTitle: "Un projet en tête ?",
     contactText:
@@ -247,13 +287,11 @@ const translations = {
     ],
   },
   en: {
-    nav: ["Home", "Services", "Skills", "Portfolio", "About"],
+    nav: ["Home", "About", "Services", "Skills", "Portfolio"],
     contact: "Let’s talk about your project",
     heroEyebrow: "CREATIVE STUDIO · DESIGN · STRATEGY",
     heroTitle: "Let’s give your brand",
     heroAccent: "a bold identity.",
-    heroDescription:
-      "We turn your ideas into visual identities and digital experiences that capture attention, tell your story, and showcase your business.",
     discover: "Explore our services",
     studio: "Discover the studio",
     heroNote: "CREATE WITH PURPOSE. MAKE AN IMPACT.",
@@ -266,7 +304,7 @@ const translations = {
     skillsEyebrow: "OUR EXPERTISE",
     skillsTitle: "Ideas, creativity, and expertise.",
     skillsIntro:
-      "Independent graphic designer and photographer since 2022, shaping ideas with a thoughtful, creative approach.",
+      "We shape ideas with a thoughtful, creative approach that brings together graphic design and photography.",
     tools: "TOOLS WE USE",
     portfolioEyebrow: "OUR CREATIVE WORLD",
     portfolioTitle: "Selected work",
@@ -276,11 +314,49 @@ const translations = {
     less: "See less",
     open: "View project full size",
     close: "Close preview",
-    aboutEyebrow: "THE NAGNOVA SPIRIT",
-    aboutFirst: "Beauty attracts.",
-    aboutSecond: "Meaning persuades.",
-    aboutText:
-      "Every project starts with an idea. Our role is to give it a clear form, a distinctive personality, and a consistent visual direction.",
+    aboutEyebrow: "ABOUT",
+    aboutTitleLines: ["Graphic designer,", "builder", "of brand identities."],
+    aboutName: "NAGNOVA Houssen bin Yliasse",
+    aboutRole: "Graphic designer & visual creative",
+    aboutBio:
+      "I’m the founder of NAGNOVA, a graphic design studio that turns ideas into clear, consistent, memorable visual systems. Since 2022, I’ve worked as an independent graphic designer and photographer. Every project is grounded in a strong structure, a distinctive identity, and thoughtful execution.",
+    aboutBioSecond:
+      "From logos and complete brand guidelines to communication materials and print, I create identities designed to last, precise in their grid and bold in their execution.",
+    aboutMantra: ["Beauty attracts.", "Meaning persuades."],
+    aboutPhotoBadgeValue: "04+",
+    aboutPhotoBadge: "YEARS OF EXPERIENCE",
+    aboutVision: "My vision",
+    aboutVisionText:
+      "Creating designs that do more than look beautiful: they have a purpose, tell a story, and help brands stand out.",
+    aboutExpertise: "Creative fields",
+    aboutExpertises: [
+      "Visual identity & branding",
+      "UI/UX design",
+      "Advertising posters & communication materials",
+      "Illustration",
+    ],
+    aboutMethodEyebrow: "HOW I WORK",
+    aboutMethodTitle: "My process",
+    aboutMethodSteps: [
+      [
+        "Discovery",
+        "Understanding the brief, the brand, and its market to build a solid foundation.",
+      ],
+      [
+        "Concept",
+        "Creative exploration through moodboards, graphic directions, and early visual ideas.",
+      ],
+      [
+        "Creation",
+        "Building the visual system: logo, colors, typography, and graphic elements.",
+      ],
+      [
+        "Delivery",
+        "Handing over the final files and agreed visual assets, ready to use.",
+      ],
+    ],
+    aboutPhotoPlaceholder: "Space for your professional photo",
+    aboutContact: "Let’s talk about your project",
     contactEyebrow: "YOUR NEXT CHAPTER",
     contactTitle: "Have a project in mind?",
     contactText:
@@ -370,7 +446,13 @@ const translations = {
   },
 };
 
-function Reveal({ children, className = "", delay = 0, ...props }) {
+function Reveal({
+  children,
+  className = "",
+  delay = 0,
+  immediate = false,
+  ...props
+}) {
   const [visible, setVisible] = useState(false);
   const elementRef = useRef(null);
   useEffect(() => {
@@ -379,18 +461,23 @@ function Reveal({ children, className = "", delay = 0, ...props }) {
       setVisible(true);
       return undefined;
     }
+
+    const frame = immediate
+      ? window.requestAnimationFrame(() => setVisible(true))
+      : null;
+
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting) {
-          setVisible(true);
-          observer.disconnect();
-        }
+        setVisible(entry.isIntersecting);
       },
-      { threshold: 0.12 },
+      { threshold: 0.08, rootMargin: "0px 0px -6% 0px" },
     );
     observer.observe(element);
-    return () => observer.disconnect();
-  }, []);
+    return () => {
+      if (frame !== null) window.cancelAnimationFrame(frame);
+      observer.disconnect();
+    };
+  }, [immediate]);
 
   return (
     <div
@@ -572,10 +659,10 @@ function App() {
           }}
         >
           <a href="#accueil">{t.nav[0]}</a>
-          <a href="#services">{t.nav[1]}</a>
-          <a href="#competences">{t.nav[2]}</a>
-          <a href="#realisations">{t.nav[3]}</a>
-          <a href="#apropos">{t.nav[4]}</a>
+          <a href="#apropos">{t.nav[1]}</a>
+          <a href="#services">{t.nav[2]}</a>
+          <a href="#competences">{t.nav[3]}</a>
+          <a href="#realisations">{t.nav[4]}</a>
           <a href="#contact" className="nav-contact">
             {t.contact} <span>↗</span>
           </a>
@@ -596,7 +683,7 @@ function App() {
       </header>
 
       <section className="hero" id="accueil">
-        <Reveal className="hero-copy">
+        <Reveal className="hero-copy" immediate>
           <p className="eyebrow">
             <span className="red-dot" />
             {t.heroEyebrow}
@@ -605,7 +692,6 @@ function App() {
             {t.heroTitle}
             <span className="headline-accent"> {t.heroAccent}</span>
           </h1>
-          <p className="hero-description">{t.heroDescription}</p>
           <div className="hero-actions">
             <a className="button button-primary" href="#services">
               {t.discover} <span>↗</span>
@@ -622,6 +708,7 @@ function App() {
         <Reveal
           className="hero-visual"
           delay={120}
+          immediate
           role="img"
           aria-label="Composition graphique animée avec le N de NAGNOVA"
         >
@@ -639,6 +726,105 @@ function App() {
             <span>{t.creativity}</span>
           </div>
         </Reveal>
+      </section>
+
+      <section className="about-section" id="apropos">
+        <div className="section-wrap about-inner">
+          <div className="about-main">
+            <Reveal className="about-photo-reveal">
+              <div className="about-photo-placeholder">
+                <img
+                  className="about-photo"
+                  src="/nagnova-houssen-bin-yliasse.jpeg"
+                  alt="Portrait professionnel de NAGNOVA Houssen bin Yliasse"
+                  onLoad={(event) => {
+                    event.currentTarget.nextElementSibling.hidden = true;
+                  }}
+                  onError={(event) => {
+                    event.currentTarget.hidden = true;
+                  }}
+                />
+                <div className="about-photo-fallback" aria-hidden="true">
+                  <span className="about-photo-icon">
+                    <svg viewBox="0 0 64 64" fill="none">
+                      <circle cx="32" cy="22" r="11" />
+                      <path d="M11 56c1.8-12 9.2-18 21-18s19.2 6 21 18" />
+                    </svg>
+                  </span>
+                  <span>{t.aboutPhotoPlaceholder}</span>
+                </div>
+                <div
+                  className="about-photo-badge"
+                  aria-label={`${t.aboutPhotoBadgeValue} ${t.aboutPhotoBadge}`}
+                >
+                  <strong>{t.aboutPhotoBadgeValue}</strong>
+                  <span>{t.aboutPhotoBadge}</span>
+                </div>
+              </div>
+            </Reveal>
+            <Reveal className="about-profile" delay={100}>
+              <p className="about-editorial-label">{t.aboutEyebrow}</p>
+              <h2 className="about-editorial-title">
+                {t.aboutTitleLines.map((line) => (
+                  <span key={line}>{line}</span>
+                ))}
+              </h2>
+              <div className="about-bio">
+                <p className="about-name">{t.aboutName}</p>
+                <p className="about-role">{t.aboutRole}</p>
+                <p className="about-bio-text">{t.aboutBio}</p>
+                <p className="about-bio-text">{t.aboutBioSecond}</p>
+              </div>
+              <p className="about-mantra">
+                <span>{t.aboutMantra[0]}</span> {t.aboutMantra[1]}
+              </p>
+              <div className="about-vision">
+                <h3>{t.aboutVision}</h3>
+                <p>{t.aboutVisionText}</p>
+              </div>
+              <a className="button button-primary about-cta" href="#contact">
+                {t.aboutContact} <span aria-hidden="true">&#8599;</span>
+              </a>
+            </Reveal>
+          </div>
+          <section
+            className="about-method"
+            aria-labelledby="about-method-title"
+          >
+            <div className="about-method-heading">
+              <p className="about-method-eyebrow">{t.aboutMethodEyebrow}</p>
+              <h3 id="about-method-title">{t.aboutMethodTitle}</h3>
+            </div>
+            <div className="about-method-grid">
+              {t.aboutMethodSteps.map(([title, description], index) => (
+                <Reveal
+                  className="about-method-step"
+                  key={title}
+                  delay={index * 90}
+                >
+                  <div className="about-method-marker" aria-hidden="true">
+                    <span className="about-method-number">
+                      {String(index + 1).padStart(2, "0")}
+                    </span>
+                    <span className="about-method-dot" />
+                  </div>
+                  <div className="about-method-copy">
+                    <h4>{title}</h4>
+                    <p>{description}</p>
+                  </div>
+                </Reveal>
+              ))}
+            </div>
+          </section>
+          <Reveal className="about-expertise" delay={180}>
+            <h3>{t.aboutExpertise}</h3>
+            <ul>
+              {t.aboutExpertises.map((expertise) => (
+                <li key={expertise}>{expertise}</li>
+              ))}
+            </ul>
+          </Reveal>
+        </div>
       </section>
 
       <section className="services section-wrap" id="services">
@@ -691,34 +877,36 @@ function App() {
               </Reveal>
             ))}
           </div>
-          <div className="technology-carousel">
-            <p className="technology-caption">{t.tools}</p>
-            <div className="technology-marquee">
-              <div className="technology-track">
-                {[0, 1].map((copy) => (
-                  <div
-                    className="technology-group"
-                    key={copy}
-                    aria-hidden={copy === 1 ? "true" : undefined}
-                  >
-                    {technologies.map((technology) => (
-                      <div className="technology-item" key={technology.name}>
-                        <span
-                          className={`technology-mark ${technology.style}`}
-                          aria-hidden="true"
-                        >
-                          {technology.mark}
-                        </span>
-                        <span className="technology-name">
-                          {technology.name}
-                        </span>
-                      </div>
-                    ))}
-                  </div>
-                ))}
+          <Reveal className="technology-reveal" delay={120}>
+            <div className="technology-carousel">
+              <p className="technology-caption">{t.tools}</p>
+              <div className="technology-marquee">
+                <div className="technology-track">
+                  {[0, 1].map((copy) => (
+                    <div
+                      className="technology-group"
+                      key={copy}
+                      aria-hidden={copy === 1 ? "true" : undefined}
+                    >
+                      {technologies.map((technology) => (
+                        <div className="technology-item" key={technology.name}>
+                          <span
+                            className={`technology-mark ${technology.style}`}
+                            aria-hidden="true"
+                          >
+                            {technology.mark}
+                          </span>
+                          <span className="technology-name">
+                            {technology.name}
+                          </span>
+                        </div>
+                      ))}
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
-          </div>
+          </Reveal>
         </div>
       </section>
 
@@ -815,20 +1003,6 @@ function App() {
         </dialog>
       </section>
 
-      <section className="about-section" id="apropos">
-        <Reveal className="section-wrap about-inner">
-          <p className="eyebrow">
-            <span className="red-dot" />
-            {t.aboutEyebrow}
-          </p>
-          <h2>
-            {t.aboutFirst}
-            <span> {t.aboutSecond}</span>
-          </h2>
-          <p>{t.aboutText}</p>
-        </Reveal>
-      </section>
-
       <section className="contact-section section-wrap" id="contact">
         <Reveal className="contact-copy">
           <p className="eyebrow">{t.contactEyebrow}</p>
@@ -918,11 +1092,7 @@ function App() {
       <footer className="site-footer">
         <div className="footer-main">
           <div className="footer-brand-block">
-            <a
-              className="footer-brand"
-              href="#accueil"
-              aria-label={t.backHome}
-            >
+            <a className="footer-brand" href="#accueil" aria-label={t.backHome}>
               <img
                 className="footer-logo"
                 src="/logo-nagnova.png"
@@ -933,23 +1103,27 @@ function App() {
           </div>
           <nav className="footer-navigation" aria-label={t.mainNav}>
             <a href="#accueil">{t.nav[0]}</a>
-            <a href="#services">{t.nav[1]}</a>
-            <a href="#competences">{t.nav[2]}</a>
-            <a href="#realisations">{t.nav[3]}</a>
-            <a href="#apropos">{t.nav[4]}</a>
+            <a href="#apropos">{t.nav[1]}</a>
+            <a href="#services">{t.nav[2]}</a>
+            <a href="#competences">{t.nav[3]}</a>
+            <a href="#realisations">{t.nav[4]}</a>
           </nav>
           <div className="footer-actions">
             <a className="footer-contact" href="#contact">
               {t.contact} <span aria-hidden="true">↗</span>
             </a>
-            <a className="footer-top-link" href="#accueil">{t.top}</a>
+            <a className="footer-top-link" href="#accueil">
+              {t.top}
+            </a>
           </div>
         </div>
         <div className="footer-bottom">
           <p>
             © {new Date().getFullYear()} NAGNOVA. {t.footer}
           </p>
-          <span>{t.strategy} · {t.creativity}</span>
+          <span>
+            {t.strategy} · {t.creativity}
+          </span>
         </div>
       </footer>
     </main>
